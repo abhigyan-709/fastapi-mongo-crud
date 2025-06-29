@@ -4,12 +4,12 @@ from app import crud
 
 app = FastAPI()
 
-@app.post("/items/", response_model=Item)
+@app.post("/items-by-abhigyan/", response_model=Item)
 def create(item: ItemCreate):
     item_id = crud.create_item(item.dict())
     return crud.get_item(item_id)
 
-@app.get("/items/", response_model=list[Item])
+@app.get("/items-by-abhigyan/", response_model=list[Item])
 def read_all():
     return crud.get_all_items()
 

@@ -9,4 +9,4 @@ MONGO_DB = os.getenv("MONGO_DB")
 
 client = MongoClient(MONGO_URI)
 db = client[MONGO_DB]
-collection = db["items"]
+collection = db["items-by-abhigyan"]
